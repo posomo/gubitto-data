@@ -117,5 +117,5 @@ def call_api(loop_cnt):
     time.sleep(3)
 
 
-for i in range(100):
+for i in range(3):
     call_api(i)
