@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 
 def call_api(loop_cnt):
@@ -108,11 +109,12 @@ def call_api(loop_cnt):
     #print(loads)
 
     response = requests.post(url, headers=headers, data=mydata.encode())
-    response_json = json.dumps(response.json())
+    #response_json = json.dumps(response.json())
 
     #print(json.dumps(response.json(), sort_keys=True, indent=4, ensure_ascii=False))
 
     print(f'call api[{loop_cnt}], text length {len(response.text)}, status code {response.status_code}')
+    time.sleep(3)
 
 
 for i in range(100):
